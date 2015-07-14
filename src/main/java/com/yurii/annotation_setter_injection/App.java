@@ -9,7 +9,7 @@ public class App {
         gxac.load("classpath:app-context-annotation.xml");
         gxac.refresh();
 
-        MsgProvider mp = gxac.getBean("msgProvider", MsgProvider.class);
-        System.out.println(mp.getMsg());
+        MsgRender mr = gxac.getBean("msgRenderer", MsgRender.class);
+        mr.render();
     }
 }

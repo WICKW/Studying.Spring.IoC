@@ -12,7 +12,11 @@
               http://www.springframework.org/schema/util
               http://www.springframework.org/schema/util/spring-util-3.1.xsd">
 
-       <bean id="msgRenderer" class="com.yurii.aplicationcontext.StandartOutMsgRenderer"/>
+       <bean id="msgRenderer" class="com.yurii.aplicationcontext.StandartOutMsgRenderer">
+              <property name="msgProvider">
+                     <ref bean="msgProvider"/>
+              </property>
+       </bean>
        <bean id="msgProvider" class="com.yurii.aplicationcontext.HelloWorldMsgProvider"/>
 
 </beans>
